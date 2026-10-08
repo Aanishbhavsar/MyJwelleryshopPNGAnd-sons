@@ -1,0 +1,266 @@
+.products-container {
+  padding: 50px 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+  font-family: 'Garamond', 'Georgia', serif;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.products-header h2 {
+  font-size: 32px;
+  color: #3d251e;
+  margin-bottom: 8px;
+}
+
+.products-header p {
+  font-size: 16px;
+  color: #666;
+  font-family: sans-serif;
+}
+
+/* Grid Layout */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e5dfd5;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #b82928;
+  color: #fff;
+  font-size: 11px;
+  font-family: sans-serif;
+  padding: 4px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.img-box {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-details h3 {
+  font-size: 18px;
+  color: #2b2b2b;
+  margin-bottom: 8px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.card-purity {
+  font-size: 13px;
+  color: #666;
+  font-family: sans-serif;
+  margin-bottom: 12px;
+}
+
+.card-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b82928;
+}
+
+.rating {
+  font-size: 12px;
+  background: #fff8e7;
+  color: #a3723f;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.view-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #3d251e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: sans-serif;
+  transition: background 0.2s;
+}
+
+.view-btn:hover {
+  background-color: #b82928;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 750px;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal-body {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.modal-img-box {
+  flex: 1;
+  text-align: center;
+}
+
+.modal-img-box img {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+.modal-info {
+  flex: 1.2;
+}
+
+.modal-category {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #b82928;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.modal-info h2 {
+  font-size: 22px;
+  color: #2b2b2b;
+  margin: 8px 0;
+}
+
+.modal-price {
+  font-size: 24px;
+  color: #b82928;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-specs {
+  background: #fdfaf5;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+  font-size: 13px;
+  border: 1px solid #f0e6d8;
+}
+
+.product-specs p {
+  margin: 4px 0;
+}
+
+.modal-desc {
+  font-size: 14px;
+  color: #555;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-buy {
+  background-color: #b82928;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.btn-close {
+  background-color: #eee;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+}

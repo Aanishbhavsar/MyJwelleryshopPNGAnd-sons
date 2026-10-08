@@ -1,0 +1,129 @@
+.dashboard-container {
+  background-color: #f7f3eb;
+  color: #333333;
+  padding: 20px 0 50px 0;
+  min-height: 80vh;
+}
+
+.banner-slider {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 420px;
+  margin: 10px auto 30px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.slide-content {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(61, 37, 30, 0.6);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.slider-arrow:hover {
+  background: rgba(61, 37, 30, 0.9);
+}
+
+.left-arrow { left: 20px; }
+.right-arrow { right: 20px; }
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 30px 0 25px 0;
+  color: #3d251e;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e5dfd5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.product-img-wrapper {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.product-img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0 6px 0;
+  color: #3d251e;
+}
+
+.product-price {
+  color: #b82928;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.buy-btn {
+  background-color: #3d251e;
+  color: #ffffff;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #b82928;
+}
+
+@media (max-width: 900px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .products-grid { grid-template-columns: repeat(1, 1fr); }
+}
